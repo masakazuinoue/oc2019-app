@@ -12,6 +12,7 @@ class TabAdapter(fm:FragmentManager, private val context: Context):FragmentPager
     private val urls: List<Urls> = listOf(
         Urls("おすすめ","https://api.network.hsc.ac.jp/recommend"),
         Urls("@IT","https://api.network.hsc.ac.jp/atit"),
+        Urls("日経xTECH","https://api.network.hsc.ac.jp/atit"),
         Urls("週刊ASCII","https://api.network.hsc.ac.jp/ascii"),
         Urls("GIZMODE","https://api.network.hsc.ac.jp/gizmode")
         )
@@ -26,7 +27,7 @@ class TabAdapter(fm:FragmentManager, private val context: Context):FragmentPager
     }
 
     override fun getCount(): Int {
-        return 4
+        return 5
     }
 
     override fun getPageTitle(position: Int): CharSequence? {

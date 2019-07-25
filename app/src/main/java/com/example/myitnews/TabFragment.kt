@@ -25,7 +25,7 @@ class TabFragment(): Fragment() {
 
         val args = arguments
 
-        var url:String = ""
+        var url = ""
         if (args == null){
            url = ""
         }else{

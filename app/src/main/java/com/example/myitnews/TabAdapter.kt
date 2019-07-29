@@ -9,12 +9,14 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
 class TabAdapter(fm:FragmentManager, private val context: Context):FragmentPagerAdapter(fm) {
+    private val baseUrl = "https://api.network.hsc.ac.jp/"
+
     private val urls: List<Urls> = listOf(
-        Urls("おすすめ","https://api.network.hsc.ac.jp/recommend"),
-        Urls("@IT","https://api.network.hsc.ac.jp/atit"),
-        Urls("日経xTECH","https://api.network.hsc.ac.jp/xtech"),
-        Urls("週刊ASCII","https://api.network.hsc.ac.jp/ascii"),
-        Urls("GIZMODE","https://api.network.hsc.ac.jp/gizmode")
+        Urls("おすすめ",baseUrl + "recommend"),
+        Urls("@IT",baseUrl + "atit"),
+        Urls("日経xTECH",baseUrl + "xtech"),
+        Urls("週刊ASCII",baseUrl + "ascii"),
+        Urls("GIZMODE",baseUrl + "gizmode")
         )
 
     override fun getItem(position: Int): Fragment {
